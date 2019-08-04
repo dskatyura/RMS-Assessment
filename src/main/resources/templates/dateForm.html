@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Date processor</title>
+		<link type="text/css" media="all" href="/css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	
+	<body>
+		<div class="datesInfo-form">
+			<form method="post" action="/process-date">
+				<div>Select start date: <span class="date-select"><input type="date" id="startDate" name="startDate"></span></div>
+				
+				<div>Select start date:<span class="date-select"><input type="date" id="endDate" name="endDate"></span></div>
+				
+				<div class="sbutton"><input type="submit" value="Confirm"></div>
+			</form>
+		</div>
+		
+		<div class="datesInfo" th:if="${ datesInfo?.startDate }">
+			<div class="info">Selected start date: <span th:text="${ datesInfo?.startDate }"></span></div>
+			<div class="info">Selected End date: <span th:text="${ datesInfo?.endDate }"></span></div>
+			
+			<div class="info" th:if="${ datesInfo?.daysBetween }">The number of days between start and end dates: <span th:text="${ datesInfo?.daysBetween }"></span></div>
+			
+			<div class="info error" th:if="${ datesInfo?.error }">Error: <span th:text="${ datesInfo?.error }"></span></div>
+		</div>
+	</body>
+</html>
