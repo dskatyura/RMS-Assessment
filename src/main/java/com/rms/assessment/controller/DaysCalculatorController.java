@@ -22,7 +22,7 @@ public class DaysCalculatorController {
    
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index() {
-		return dateForm();
+		return "index";
 	}
    
 	@RequestMapping(value = "/dateForm", method = RequestMethod.GET)

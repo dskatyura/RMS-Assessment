@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>File encryption utility</title>
+		<link type="text/css" media="all" href="/css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	
+	<body>
+		<div class="datesInfo-form">
+			<form method="post" action="/encrypt-file"  enctype="multipart/form-data">
+				<div>Select a text file: <span class="file-select"><input type="file" id="txtFile" name="txtFile" accept=".txt"></span></div>
+				
+				<div>Select number of threads:<span class="numThreads"><input type="text" id="numThreads" name="numThreads"></span></div>
+				
+				<div class="sbutton"><input type="submit" value="Encrypt file"></div>
+			</form>
+		</div>
+	</body>
+</html>
